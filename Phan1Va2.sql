@@ -1,3 +1,117 @@
+USE QuanLyBanHang
+GO
+INSERT INTO NHANVIEN(MANV,HOTEN,NGVL,SODT)
+VALUES
+('NV01','Nguyen Nhu Nhat', '2006-04-13','0927345678'),
+('NV02','Le Thi Phi Yen', '2006-04-21','0987567390'),
+('NV03','Nguyen Van B', '2006-04-27','0997047382'),
+('NV04','Ngo Thanh Tuan', '2006-06-24','0913758498'),
+('NV05','Nguyen Thi Truc Thanh ', '2006-07-20','0918590387')
+
+INSERT INTO KHACHHANG(MAKH,HOTEN,DCHI,NGSINH,SODT,DOANHSO,NGDK)
+VALUES
+('KH01','Nguyen Van A','731 Tran Hung Dao, Q5, TpHCM', '2006-04-13','0927345678',13060000,'2006-07-22'),
+('KH02','Tran Ngoc Han','23/5 Nguyen Trai, Q5, TpHCM', '2006-04-21','0987567390',280000,'2006-07-30'),
+('KH03','Tran Ngoc Linh','45 Nguyen Canh Chan, Q1, TpHCM', '2006-04-27','0997047382',3860000,'2006-07-05'),
+('KH04','Tran Minh Long ','50/34 Le Dai Hanh, Q10, TpHCM', '2006-06-24','0913758498',250000,'2006-10-02'),
+('KH05','Le Nhat Minh','34 Truong Dinh, Q3, TpHCM', '2006-07-20','0918590387',21000,'2006-10-28'),
+('KH06','Le Hoai Thuong','227 Nguyen Van Cu, Q5, TpHCM', '2006-04-13','0927345678',915000,'2006-11-24'),
+('KH07','Nguyen Van Tam','32/3 Tran Binh Trong, Q5, TpHCM','2006-04-21','0987567390',12500,'2006-12-01'),
+('KH08','Phan Thi Thanh','45/2 An Duong Vuong, Q5, TpHCM', '2006-04-27','0997047382',365000,'2006-12-13'),
+('KH09','Le Ha Vinh','873 Le Hong Phong, Q5, TpHCM', '2006-06-24','0913758498',70000,'2007-01-14'),
+('KH10','Ha Duy Lap','34/34B Nguyen Trai, Q1, TpHCM', '2006-07-20','0918590387',67500 ,'2007-01-16')
+
+INSERT INTO SANPHAM (MASP, TENSP, DVT, NUOCSX, GIA)
+VALUES
+('BC01', 'But chi cay', 'cay', 'Singapore', 3000),
+('BC02', 'But chi cay', 'cay', 'Singapore', 5000),
+('BC03', 'But chi cay', 'cay', 'Viet Nam', 3500),
+('BC04', 'But chi hop', 'hop', 'Viet Nam', 30000),
+('BB01', 'But bi cay', 'cay', 'Viet Nam', 5000),
+('BB02', 'But bi cay', 'cay', 'Trung Quoc', 7000),
+('BB03', 'But bi hop', 'hop', 'Thai Lan', 100000),
+('TV01', 'Tap 100 giay mong quyen', 'quyen', 'Trung Quoc', 2500),
+('TV02', 'Tap 200 giay mong quyen', 'quyen', 'Trung Quoc', 4500),
+('TV03', 'Tap 100 giay tot quyen', 'quyen', 'Viet Nam', 3000),
+('TV04', 'Tap 200 giay tot quyen', 'quyen', 'Viet Nam', 5500),
+('TV05', 'Tap 100 trang chuc', 'quyen', 'Viet Nam', 23000),
+('TV06', 'Tap 200 trang chuc', 'quyen', 'Viet Nam', 53000),
+('TV07', 'Tap 100 trang chuc', 'quyen', 'Trung Quoc', 34000),
+('ST01', 'So tay 500 trang quyen', 'quyen', 'Trung Quoc', 40000),
+('ST02', 'So tay loai 1 quyen', 'quyen', 'Viet Nam', 55000),
+('ST03', 'So tay loai 2 quyen', 'quyen', 'Viet Nam', 51000),
+('ST04', 'So tay quyen', 'quyen', 'Thai Lan', 55000),
+('ST05', 'So tay mong quyen', 'quyen', 'Thai Lan', 20000),
+('ST06', 'Phan viet bang hop', 'hop', 'Viet Nam', 5000),
+('ST07', 'Phan khong bui hop', 'hop', 'Viet Nam', 7000),
+('ST08', 'Bong bang cai', 'cai', 'Viet Nam', 1000),
+('ST09', 'But long cay', 'cay', 'Viet Nam', 5000),
+('ST10', 'But long cay', 'cay', 'Trung Quoc', 7000);
+
+INSERT INTO HOADON (SOHD, NGHD, MAKH, MANV, TRIGIA)
+VALUES
+(1001, '2006-07-23', 'KH01', 'NV01', 320000),
+(1002, '2006-08-12', 'KH01', 'NV02', 840000),
+(1003, '2006-08-23', 'KH02', 'NV01', 100000),
+(1004, '2006-09-01', 'KH02', 'NV01', 180000),
+(1005, '2006-10-20', 'KH01', 'NV02', 3800000),
+(1006, '2006-10-16', 'KH01', 'NV03', 2430000),
+(1007, '2006-10-28', 'KH03', 'NV03', 510000),
+(1008, '2006-10-28', 'KH01', 'NV03', 440000),
+(1009, '2006-10-28', 'KH03', 'NV04', 200000),
+(1010, '2006-11-01', 'KH01', 'NV01', 5200000),
+(1011, '2006-11-04', 'KH04', 'NV03', 250000),
+(1012, '2006-11-30', 'KH05', 'NV03', 21000),
+(1013, '2006-12-12', 'KH06', 'NV01', 5000),
+(1014, '2006-12-31', 'KH03', 'NV02', 3150000),
+(1015, '2007-01-01', 'KH06', 'NV01', 910000),
+(1016, '2007-01-01', 'KH07', 'NV02', 12500),
+(1017, '2007-01-02', 'KH08', 'NV03', 35000),
+(1018, '2007-01-13', 'KH08', 'NV03', 330000),
+(1019, '2007-01-13', 'KH01', 'NV03', 30000),
+(1020, '2007-01-14', 'KH09', 'NV04', 70000),
+(1021, '2007-01-16', 'KH10', 'NV03', 67500),
+(1022, '2007-01-16', NULL, 'NV03', 7000),
+(1023, '2007-01-17', NULL, 'NV01', 330000);
+
+INSERT INTO CTHD (SOHD, MASP, SL)
+VALUES
+(1006, 'ST01', 30),
+(1006, 'ST02', 10),
+(1007, 'ST03', 10),
+(1008, 'ST04', 8),
+(1009, 'ST05', 10),
+(1010, 'TV07', 50),
+(1010, 'ST07', 50),
+(1010, 'ST08', 100),
+(1010, 'ST04', 50),
+(1010, 'TV03', 100),
+(1011, 'ST06', 50),
+(1012, 'ST07', 3),
+(1013, 'ST08', 5),
+(1014, 'BC02', 80),
+(1014, 'BB02', 100),
+(1014, 'BC04', 60);
+
+INSERT INTO CTHD (SOHD, MASP, SL)
+VALUES
+(1014, 'BB01', 50),
+(1015, 'BB02', 30),
+(1015, 'BB03', 7),
+(1016, 'TV01', 5),
+(1017, 'TV02', 1),
+(1017, 'TV03', 1),
+(1017, 'TV04', 5),
+(1018, 'ST04', 6),
+(1019, 'ST05', 1),
+(1019, 'ST06', 2),
+(1020, 'ST07', 10),
+(1021, 'ST08', 5),
+(1021, 'TV01', 7),
+(1021, 'TV02', 10),
+(1022, 'ST07', 1),
+(1023, 'ST04', 6);
+
 USE QuanLyHocVu
 GO
 
